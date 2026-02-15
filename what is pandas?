@@ -44,6 +44,12 @@ Step8: Remove duplicate rows
 
 Day-3
   Data transformation and analysis
+Step9: Sorting data
+   Syntax:df.sort_values(by="column name" ascending=True or des)
+   Ex:df.sort_values(by="applicantIncome" , ascending=True) , this will sort the data in the ascending order based on the applicantIncoe column
+We can also sort multiple columns at a time
+  Syntax:df.sort_values(by=["c1","c2] , ascending=[True,false] )
+
   
     
   
