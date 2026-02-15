@@ -1,0 +1,52 @@
+Day-1
+pandas is one of the python library which is used to handles the "structured data" like tables which have rows and columns.
+Structured data examples are csv and excel files where the data is in the form of rows and columns.
+for importing pandas in our project we use some environements to develop the code or building the projects.
+We use google colab or jupiter notebook to work with this.
+Steps:
+Step1: install the pandas library by uisng the pip command
+       !pip install pandas
+Step2: import the pandas library as pd
+       import pandas as pd
+Step3: Load the data and read the data. For this we nedd to download the files into the environement like in google colab we need to import the files otherwise in jupiter we will give the path of the file
+      pd.read_csv(r " ")
+      pd.read_excel(r, " ")
+Step4: Inspect the data, here we assign the variable for example:df=pd.read_csv(r " " ) 
+     df.head()  --> gives the first 5 rows
+     df.tail()  --> gives the last 5 rows
+     df.shape   --> writtens how many rows and columns are present in that dataset
+     df.colums  --> provides the names of the columns present in the dataset
+     df.info()  --> provides the total information about the data like data types , null , not null etc.. here string is taken as object.
+
+Day-2
+Step5: Data selection functions ( these are used to denote the rows and the columns that we want where the index for the row and column starts from 0)
+   df.loc -->if we want to retrieve the data using names
+   df.iloc  -->if we want to retreive the data using index
+   Syntax: df.loc[row name, column name]
+      Ex:  df.loc[0:1,"A": "B"]
+           df.loc[0:1, "loan_id" : "gender"]
+   Syntax: df.iloc[row index , column index ]  ----->here whenever we are giving the end value python takes -1 from that for example if we give 0:2 then it takes from 0th row to 2-1=1 which means upto 1st row
+      EX: df.iloc[0:2 ,0:2 ]
+Step6: Handling missing values ( shows how we handle the null values, missing data ,outliers ,noise)
+     Symtax: df.isnull().sum() --> which gives the sum of null values present in each column
+     For this we have two ways but based on the requirement we use them: 1) dropping the null values --> df.dropna()
+                                                                         2) filling the null values  --> df.fillna(0) 
+Step7: Datatype conversion
+     here we convert the data into float, int etc..
+     Syntax: df['column name'].astype('datatype')
+     Ex: df['applicantincome'].astype('float')
+     here to apply this function to the data we need to reassign the same name 
+     Ex: df['applicantincome']=df['applicantincome'].astype('float')
+     then view by using df.head()
+Step8: Remove duplicate rows
+     Syntax: df.drop_duplicates()
+
+
+Day-3
+  Data transformation and analysis
+  
+    
+  
+     
+     
+      
